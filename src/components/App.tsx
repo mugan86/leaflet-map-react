@@ -23,15 +23,4 @@ const LeafletMap: React.FunctionComponent<{ config: MapProps }> = ({ config }) =
   return <div id={config.id} style={config.style} className='map'></div>
 }
 
-// TODO Define to validate data input
-/*if (process.env.NODE_ENV !== "production") {
-    Map.propTypes= {
-      id: PropTypes.string,
-      style: {
-        width: PropTypes.string,
-        height: PropTypes.string
-      }
-    };
-  }*/
-
 export default LeafletMap
