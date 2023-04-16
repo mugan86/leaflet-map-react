@@ -1,11 +1,5 @@
-import {
-    addLayers,
-    activeFullScreen
-} from './Functions';
+import { addLayers, activeFullScreen } from './Functions'
 
-import { FlyTo } from './Camera';
+import { FlyTo } from './Camera'
 
-export {
-    addLayers,
-    activeFullScreen, FlyTo
-};
+export { addLayers, activeFullScreen, FlyTo }

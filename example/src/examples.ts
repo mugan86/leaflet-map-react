@@ -1,33 +1,33 @@
 import { IBaseLayer, IMarker, ILayers, tileLayers, MarkerColor } from './../../dist/esm'
-import { drinkWaterSoraluze } from './data';
+import { drinkWaterSoraluze } from './data'
 
 export interface UsePropertiesMap {
-  buttonLabel: string;
-  center: { lat: number; lng: number };
-  zoom?: number;
-  fullscreen?: boolean;
-  defaultLayer?: IBaseLayer;
-  markers?: Array<IMarker>;
-  layers?: ILayers;
-  defaultMarker?: string;
+  buttonLabel: string
+  center: { lat: number; lng: number }
+  zoom?: number
+  fullscreen?: boolean
+  defaultLayer?: IBaseLayer
+  markers?: Array<IMarker>
+  layers?: ILayers
+  defaultMarker?: string
   fitBounds?: {
-    center: boolean;
-    markers: boolean;
-  };
-  title: string;
+    center: boolean
+    markers: boolean
+  }
+  title: string
 }
 interface ExampleConfigs {
-  Basic: UsePropertiesMap;
-  BasicFullscreen: UsePropertiesMap;
-  BasicWithDefaultMarker?: UsePropertiesMap;
-  MarkersBasic: UsePropertiesMap;
-  BasicWithDefaultMarkerAndPopup: UsePropertiesMap;
-  MapWithControlLayersBase: UsePropertiesMap;
-  MapWithCtrlLayers?: UsePropertiesMap;
-  MapWithCtrlLayersMarkers: UsePropertiesMap;
-  MarkersCustom: UsePropertiesMap;
-  MarkersCustomFitBoundsCenter: UsePropertiesMap;
-  MarkersCustomFitBoundsMarker: UsePropertiesMap;
+  Basic: UsePropertiesMap
+  BasicFullscreen: UsePropertiesMap
+  BasicWithDefaultMarker?: UsePropertiesMap
+  MarkersBasic: UsePropertiesMap
+  BasicWithDefaultMarkerAndPopup: UsePropertiesMap
+  MapWithControlLayersBase: UsePropertiesMap
+  MapWithCtrlLayers?: UsePropertiesMap
+  MapWithCtrlLayersMarkers: UsePropertiesMap
+  MarkersCustom: UsePropertiesMap
+  MarkersCustomFitBoundsCenter: UsePropertiesMap
+  MarkersCustomFitBoundsMarker: UsePropertiesMap
 }
 
 export const PLACES_LIST_LOCATIONS = {
@@ -53,19 +53,18 @@ export const PLACES_LIST_LOCATIONS = {
   VALENCIA: [39.4669627, -0.4352962],
   VENECIA_ITALIA: [45.4374999, 12.3319962],
   VITORIA_GASTEIZ: [42.8540316, -2.7121775],
-};
+}
 
 const defaultLocation = {
   lat: PLACES_LIST_LOCATIONS.MADRID[0],
   lng: PLACES_LIST_LOCATIONS.MADRID[1],
-}; // Madrid
+} // Madrid
 
 export const EXAMPLES_CONFIGS: ExampleConfigs = {
   Basic: {
     buttonLabel: 'Mapa',
     center: defaultLocation,
-    title:
-      'Ejemplo Básico de carga de mapa. El zoom es aleatorio y por cada recarga se asigna uno nuevo',
+    title: 'Ejemplo Básico de carga de mapa. El zoom es aleatorio y por cada recarga se asigna uno nuevo',
   },
   BasicFullscreen: {
     buttonLabel: 'Fullscreen',
@@ -76,8 +75,7 @@ export const EXAMPLES_CONFIGS: ExampleConfigs = {
     },
     zoom: 10,
     fullscreen: true,
-    title:
-      'Ejemplo Básico de carga de mapa con control para mostrar mapa en pantalla completa',
+    title: 'Ejemplo Básico de carga de mapa con control para mostrar mapa en pantalla completa',
   },
   /*BasicWithDefaultMarker: {
     buttonLabel: 'Marcador',
@@ -263,8 +261,7 @@ export const EXAMPLES_CONFIGS: ExampleConfigs = {
         },
       ],
     },
-    title:
-      'Ejemplo de control de capas usando las base y de superposición (overlayers) con marcadores con información',
+    title: 'Ejemplo de control de capas usando las base y de superposición (overlayers) con marcadores con información',
   },
   MarkersCustom: {
     // No centra cámara en base a nada, coge el zoom asignado
@@ -288,11 +285,10 @@ export const EXAMPLES_CONFIGS: ExampleConfigs = {
         <h2>${drinkWater.name}</h2>
         `,
           },
-        };
+        }
       }),
     ],
-    title:
-      'Ejemplo de uso de marcadores personalizados con las ubicaciones especificas',
+    title: 'Ejemplo de uso de marcadores personalizados con las ubicaciones especificas',
   },
   MarkersCustomFitBoundsCenter: {
     buttonLabel: 'Fitbounds Center',
@@ -319,7 +315,7 @@ export const EXAMPLES_CONFIGS: ExampleConfigs = {
         <h2>${drinkWater.name}</h2>
         `,
           },
-        };
+        }
       }),
     ],
     title:
@@ -350,10 +346,10 @@ export const EXAMPLES_CONFIGS: ExampleConfigs = {
         <h2>${drinkWater.name}</h2>
         `,
           },
-        };
+        }
       }),
     ],
     title:
       'Ejemplo de control de capas usando las base y de superposición (overlayers) con correción del zoom en base a la posición de los marcadores del mapa',
   },
-};
+}

@@ -20,7 +20,6 @@ const ATRIBUTIONS_LIST = {
     '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }
 
-
 export const tileLayers = {
   baseLayers: {
     default: {

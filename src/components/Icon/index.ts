@@ -1,8 +1,7 @@
-import {MarkerColor,
-    MarkerColorOptions} from './Constants';
+import { MarkerColor, MarkerColorOptions } from './Constants'
 
-    import {defaultOptionsIconConfig} from './Default';
+import { defaultOptionsIconConfig } from './Default'
 
-    import { drinkWaterIcon } from './Custom';
+import { drinkWaterIcon } from './Custom'
 
-export {MarkerColor, MarkerColorOptions, defaultOptionsIconConfig, drinkWaterIcon};
+export { MarkerColor, MarkerColorOptions, defaultOptionsIconConfig, drinkWaterIcon }

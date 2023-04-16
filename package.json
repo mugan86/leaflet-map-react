@@ -1,5 +1,5 @@
 {
-  "name": "leaflet-react",
+  "name": "@mugan86/leaflet-react",
   "version": "1.0.1",
   "description": "",
   "main": "./dist/cjs/index.js",
@@ -9,8 +9,11 @@
     "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "copy:styles": "cp -R ./src/assets ./dist",
+    "pkg:pack": "yarn build && yarn copy:styles && npm pack",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run prettier && npm run lint",
+    "prepublishOnly": "yarn prettier && yarn lint && yarn build",
+    "publish": "npm publish --access public",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "lint:fix": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\" --fix",
     "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\""
@@ -22,6 +25,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/leaflet": "^1.9.3",
+    "@types/leaflet.markercluster": "^1.5.1",
     "@types/react": "^18.0.35",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
@@ -37,6 +41,7 @@
   },
   "dependencies": {
     "leaflet": "^1.9.3",
+    "leaflet.markercluster": "^1.5.3",
     "tslib": "^2.5.0"
   },
   "peerDependencies": {
